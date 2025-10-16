@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build WiFi Scanner",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-o",
+                "wifiscanner",
+                "src/main.cpp",
+                "src/wifi_scanner.cpp",
+                "-I/usr/include/libnl3",
+                "-lnl-3",
+                "-lnl-genl-3",
+                "-std=c++17"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build with Clang++"
+        }
+    ]
+}
